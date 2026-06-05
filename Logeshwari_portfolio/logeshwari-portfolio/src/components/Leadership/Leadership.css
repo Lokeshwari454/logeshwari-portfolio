@@ -1,0 +1,38 @@
+.lead-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.lead-panel {
+  padding: 4rem;
+}
+
+.lead-role-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+.lead-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.lead-item {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.lead-item::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 900;
+}

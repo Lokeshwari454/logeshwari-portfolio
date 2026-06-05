@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Dark Mode Baseline (Top Image Template) */
+  --bg-main: #121215;
+  --bg-secondary: #1a1a1f;
+  --text-main: #ffffff;
+  --text-muted: #a0a0ab;
+  --accent: #ff4a57; /* Coral Crimson color from template */
+  --accent-rgb: 255, 74, 87;
+  --card-border: rgba(255, 255, 255, 0.05);
+  --glass-card: rgba(26, 26, 31, 0.7);
+  --transition-speed: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] {
+  /* Light Mode Baseline (Bottom Image Template) */
+  --bg-main: #f0f6fa;
+  --bg-secondary: #ffffff;
+  --text-main: #2d3748;
+  --text-muted: #64748b;
+  --accent: #ff4a57;
+  --accent-rgb: 255, 74, 87;
+  --card-border: rgba(0, 0, 0, 0.06);
+  --glass-card: rgba(255, 255, 255, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: var(--transition-speed);
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 10%;
+  position: relative;
+}
+
+/* Scroll-Reveal Lazy-Loading CSS States */
+.lazy-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  filter: blur(5px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lazy-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+/* Shared Premium Layout Framework Components */
+.glass-panel {
+  background: var(--glass-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  transition: var(--transition-speed);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 4px;
+  background-color: var(--accent);
+}

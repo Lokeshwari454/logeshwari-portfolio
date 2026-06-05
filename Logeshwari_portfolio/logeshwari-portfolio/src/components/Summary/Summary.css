@@ -1,0 +1,16 @@
+.summary-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 4.5rem;
+}
+
+.summary-paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.summary-paragraph:last-child {
+  margin-bottom: 0;
+}

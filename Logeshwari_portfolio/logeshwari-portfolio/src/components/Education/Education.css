@@ -1,0 +1,56 @@
+.edu-layout-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.edu-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.edu-card {
+  padding: 3.5rem;
+}
+
+.edu-duration {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.edu-degree {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.edu-institute {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.edu-spec {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.edu-score-badge {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: rgba(var(--accent-rgb), 0.08);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .edu-dual-grid { grid-template-columns: 1fr; }
+}
